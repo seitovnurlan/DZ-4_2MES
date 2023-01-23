@@ -14,16 +14,6 @@ class SocialFund {
     public func addPensioner(_ person: Retiree){ //Добавление пенсионера
             arrayRetiree.append(person)
     }
-    func showInfo() {
-        for i in arrayRetiree {
-            print("ФИО: \(i.firstName) \(i.lastName) Сумма пенсии: \(i.pensionAmount) Кол-во лет: \(i.numberOfYears)")
-        }
-    }
-    func showInfo2() {
-        for i in arrayRetiree {
-            print("ФИО: \(i.firstName) \(i.lastName) Сумма пенсии: \(i.pensionAmount)")
-        }
-    }
     private func pensionIncrease(_ person: [Retiree]) { //Повышение пенсий
         for i in person {
             if i.numberOfYears > 5 {
@@ -34,7 +24,9 @@ class SocialFund {
     
     internal func pensionPayments() { //Отображает всех пенионеров
         pensionIncrease(arrayRetiree)
-        showInfo2()
+        for i in arrayRetiree {
+            print("ФИО: \(i.firstName) \(i.lastName) Сумма пенсии: \(i.pensionAmount)")
+        }
         
     }
 }

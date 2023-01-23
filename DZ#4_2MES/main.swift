@@ -25,10 +25,7 @@ socFund.addPensioner(person2)
 socFund.addPensioner(person3)
 socFund.addPensioner(person4)
 socFund.addPensioner(person5)
-//print("Do")
-//socFund.showInfo()
 
-//print("Posle")
 socFund.pensionPayments()
 
 
